@@ -1,2 +1,4 @@
 # virtual environment
 /file_sharing_env/
+/db.sqlite/
+/.idea/
