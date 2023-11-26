@@ -1,5 +1,6 @@
 # virtual environment
 /file_sharing_env/
-/db.sqlite
+db.sqlite
 /.idea/
 /media/*
+!/media/.gitkeep
