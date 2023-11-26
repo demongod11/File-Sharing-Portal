@@ -262,6 +262,7 @@ def My_Files(request):
             notfavfolders.append(top_folder[i])
     context = {'all_files': favfiles, 'notfav':notfavfiles,'all_folders': favfolders,'notfavfolders':notfavfolders}
 
+
     return render(request, 'filesharing/MY_Files.html', context)
 def uploadfile(request):
     if request.method =='POST':

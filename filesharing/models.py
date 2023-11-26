@@ -2,9 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 import os
+
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
     return 'user_{0}/{1}'.format(instance.user.id, filename)
+
 # Create your models here.
 class Folder(models.Model):
     name=models.CharField(max_length=100,null=True,blank=True)
@@ -15,7 +17,7 @@ class Folder(models.Model):
         return  self.name
 
     def get_absolute_url(self):
-        return reverse('fileshare:My_Files')
+        return reverse('filesharing:My_Files')
 
 class File(models.Model):
 

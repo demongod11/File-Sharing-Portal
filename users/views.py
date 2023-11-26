@@ -31,12 +31,12 @@ def login(request):
 def register(request):
     if request.method == 'POST':
         username=request.POST['username']
-        print(username)
+        # print(username)
     
         email=request.POST.get('newemail')
         
         password1=request.POST.get('pass1')
-        print(password1)
+        # print(password1)
         password2=request.POST.get('pass2')
         if password1 == password2:
            if User.objects.filter(username=username).exists():
@@ -57,6 +57,7 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
+    
 @login_required
 def alreadythere(request):
      use=get_object_or_404(User,id=request.user.id)
